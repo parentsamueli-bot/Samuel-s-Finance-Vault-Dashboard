@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Finance Vault Dashboard is a private, local-first personal finance dashboard used by the account owner for balance and transaction tracking."
+    />
+    <link rel="icon" type="image/png" href="finance-vault-icon-1024.png" />
+    <link rel="apple-touch-icon" href="finance-vault-icon-1024.png" />
+    <title>Finance Vault Dashboard</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #122033;
+        --muted: #536173;
+        --line: #d7e0ec;
+        --panel: #ffffff;
+        --wash: #f5f9fc;
+        --teal: #0f766e;
+        --teal-dark: #064e3b;
+        --blue: #1e3a5f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 34rem),
+          linear-gradient(135deg, #f8fbff 0%, #eef6f5 100%);
+        line-height: 1.55;
+      }
+
+      main {
+        width: min(920px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      .shell {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 24px 60px rgba(18, 32, 51, 0.12);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 24px;
+        align-items: center;
+        padding: 36px;
+        background: linear-gradient(135deg, var(--teal-dark), var(--blue));
+        color: #ffffff;
+      }
+
+      .mark {
+        display: grid;
+        width: 92px;
+        height: 92px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.38);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .mark-text {
+        color: #ffffff;
+        font-size: 1.78rem;
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 1;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.32);
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        line-height: 1.12;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 6vw, 4rem);
+        letter-spacing: 0;
+      }
+
+      h2 {
+        font-size: clamp(1.25rem, 3vw, 1.65rem);
+      }
+
+      .subtitle {
+        margin: 12px 0 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 1.08rem;
+      }
+
+      .content {
+        display: grid;
+        gap: 18px;
+        padding: 28px;
+      }
+
+      section {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--panel);
+        padding: 24px;
+      }
+
+      p {
+        margin: 12px 0 0;
+        color: var(--muted);
+      }
+
+      ul {
+        display: grid;
+        gap: 10px;
+        margin: 16px 0 0;
+        padding-left: 1.25rem;
+        color: var(--muted);
+      }
+
+      strong {
+        color: var(--ink);
+      }
+
+      .notice {
+        border-color: rgba(15, 118, 110, 0.28);
+        background: #f0fdfa;
+      }
+
+      .footer {
+        padding: 0 28px 28px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 640px) {
+        main {
+          width: min(100% - 20px, 920px);
+          padding: 24px 0;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 28px;
+        }
+
+        .mark {
+          width: 76px;
+          height: 76px;
+          border-radius: 20px;
+        }
+
+        .mark-text {
+          font-size: 1.45rem;
+        }
+
+        .content,
+        .footer {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="shell">
+        <header class="hero">
+          <div class="mark" aria-hidden="true">
+            <span class="mark-text">$IP</span>
+          </div>
+          <div>
+            <h1>Finance Vault Dashboard</h1>
+            <p class="subtitle">
+              A private, local-first personal finance dashboard for account balance and
+              transaction tracking.
+            </p>
+          </div>
+        </header>
+
+        <div class="content">
+          <section>
+            <h2>Purpose</h2>
+            <p>
+              Finance Vault Dashboard is used by the account owner to view personal
+              financial accounts in one place, track current balances, and review
+              transaction history for personal net worth and cash flow tracking.
+            </p>
+          </section>
+
+          <section>
+            <h2>Data Access</h2>
+            <p>
+              When the account owner connects an institution, the application may request
+              access to account names, account balances, account types, and transaction
+              history needed for the dashboard.
+            </p>
+            <ul>
+              <li><strong>Balances</strong> are used to update personal net worth views.</li>
+              <li><strong>Transactions</strong> are used for account review and activity tracking.</li>
+              <li><strong>Account details</strong> are used to match connected accounts to the dashboard.</li>
+            </ul>
+          </section>
+
+          <section class="notice">
+            <h2>Privacy And Storage</h2>
+            <p>
+              Finance Vault Dashboard is designed as a private local application. Financial
+              data is stored in an encrypted vault on the account owner's machine. The app
+              does not sell personal financial data and does not share it with third parties
+              for advertising or marketing.
+            </p>
+          </section>
+
+          <section>
+            <h2>Support</h2>
+            <p>
+              For questions about this application or connected account access, use the
+              support email listed in the Plaid app profile.
+            </p>
+          </section>
+        </div>
+
+        <footer class="footer">
+          Last updated May 2026.
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>
